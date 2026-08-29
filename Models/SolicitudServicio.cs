@@ -18,7 +18,7 @@ namespace tecnogas.Models
         [Required]
         public string TipoServicio { get; set; } // Instalación, Mantenimiento, Revisión, Fuga
 
-        public string? Descripcion { get; set; }
+        public string Descripcion { get; set; }
 
         public DateTime FechaRegistro { get; set; } = DateTime.Now;
     }
