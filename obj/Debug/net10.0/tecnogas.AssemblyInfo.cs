@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tecnogas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c699cd6294fb69130e6edd9f0e505a35065891d3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+589d00dd9a82ea675f65aefcb672a8d0b752d281")]
 [assembly: System.Reflection.AssemblyProductAttribute("tecnogas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tecnogas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
