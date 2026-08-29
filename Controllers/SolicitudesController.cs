@@ -20,6 +20,14 @@ public class SolicitudesController : Controller
         return View(solicitudes);
     }
 
+    public async Task<IActionResult> Listado()
+    {
+        var solicitudes = await _context.Solicitudes
+            .OrderByDescending(s => s.FechaRegistro)
+            .ToListAsync();
+        return View(solicitudes);
+    }
+
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Index(SolicitudServicio solicitud)

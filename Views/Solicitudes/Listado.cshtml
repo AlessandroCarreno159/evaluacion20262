@@ -1,0 +1,44 @@
+@model List<SolicitudServicio>
+@{
+    ViewData["Title"] = "Listado de Solicitudes";
+}
+
+<h1 class="mb-4">Solicitudes de Servicio Registradas</h1>
+
+@if (Model.Any())
+{
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Cliente</th>
+                <th>Teléfono</th>
+                <th>Distrito</th>
+                <th>Tipo de Servicio</th>
+                <th>Descripción</th>
+                <th>Fecha de Registro</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in Model)
+            {
+                <tr>
+                    <td>@s.Id</td>
+                    <td>@s.Cliente</td>
+                    <td>@s.Telefono</td>
+                    <td>@s.Distrito</td>
+                    <td>@s.TipoServicio</td>
+                    <td>@(string.IsNullOrEmpty(s.Descripcion) ? "—" : s.Descripcion)</td>
+                    <td>@s.FechaRegistro.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p class="text-muted">Total de solicitudes: @Model.Count</p>
+}
+else
+{
+    <div class="alert alert-info">Aún no hay solicitudes registradas.</div>
+}
+
+<a class="btn btn-secondary" asp-action="Index">Volver al registro</a>
